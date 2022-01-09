@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+h1{
+    color: var(--White);
+    margin-top: 25px;
+}
+p{
+    color: var(--Soft-blue);
+}
+body{
+    background-color: var(--Very-dark-blue-main-BG);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    margin-top: 30px;
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.imagem{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    z-index: 1;
+}
+.imagem > img{
+    border-radius: 30px;
+    width: 100%;
+}
+.view{
+    display: none;
+    position: absolute;
+}
+
+.imagem:hover .view{
+    display: inline;
+    background-color: rgba(0, 255, 247,0.4);
+    padding: 46%;
+    cursor: pointer;
+}
+
+h1:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.conteiner > p{
+    margin-top: 25px;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.value {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: var(--Cyan);
+}
+.value img{
+    margin-right: 5px;
+}
+.time{
+    display: flex;
+    align-items: center;
+}
+.time img{
+    margin-right: 5px;
+}
+.creator{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding-top: 15px;
+    border-top: 1px solid var(--Very-dark-blue-line);
+}
+.avatar{
+    width: 35px;
+    border: solid hsl(0, 0%, 100%) 1px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+span{
+    color: var(--White);
+}
+
+span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.attribution{
+    margin-top: 5px;
+    text-align: center;
+}
+@media(max-width: 375px){
+    .card{
+        width: 360px;
+    }
+}
